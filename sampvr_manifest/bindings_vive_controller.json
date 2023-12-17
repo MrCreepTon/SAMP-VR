@@ -1,0 +1,104 @@
+{
+    "action_manifest_version" : 0,
+    "alias_info" : {},
+    "bindings" : {
+       "/actions/base" : {
+          "chords" : [],
+          "haptics" : [
+             {
+                "output" : "/actions/base/out/vibration_left",
+                "path" : "/user/hand/left/output/haptic"
+             },
+             {
+                "output" : "/actions/base/out/vibration_right",
+                "path" : "/user/hand/right/output/haptic"
+             }
+          ],
+          "poses" : [
+             {
+                "output" : "/actions/base/in/pose_lefthand",
+                "path" : "/user/hand/left/pose/raw"
+             },
+             {
+                "output" : "/actions/base/in/pose_righthand",
+                "path" : "/user/hand/right/pose/raw"
+             }
+          ],
+          "skeleton" : [
+             {
+                "output" : "/actions/base/in/skeleton_lefthand",
+                "path" : "/user/hand/left/input/skeleton/left"
+             },
+             {
+                "output" : "/actions/base/in/skeleton_righthand",
+                "path" : "/user/hand/right/input/skeleton/right"
+             }
+          ],
+          "sources" : []
+       },
+       "/actions/main" : {
+          "sources" : [
+             {
+                "inputs" : {
+                   "position" : {
+                      "output" : "/actions/main/in/Walk"
+                   },
+                   "click": {
+                     "output": "/actions/main/in/Crouch"
+                   }
+                },
+                "mode" : "trackpad",
+                "parameters" : {
+                   "deadzone_pct" : "1"
+                },
+                "path" : "/user/hand/left/input/trackpad"
+             },
+             {
+               "inputs" : {
+                  "position" : {
+                     "output" : "/actions/main/in/RotateOrJump"
+                  }
+               },
+               "mode" : "trackpad",
+               "parameters" : {
+                  "deadzone_pct" : "1"
+               },
+               "path" : "/user/hand/right/input/trackpad"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/main/in/EnterExit"
+                  }
+               },
+               "mode" : "button",
+               "path": "/user/hand/left/input/application_menu"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/main/in/Hit"
+                  }
+               },
+               "mode" : "trigger",
+               "path": "/user/hand/right/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/main/in/Hit"
+                  }
+               },
+               "mode" : "trigger",
+               "path": "/user/hand/left/input/trigger"
+            }
+            ]
+        }
+    },
+    "category" : "steamvr_input",
+    "controller_type" : "vive_controller",
+    "description" : "",
+    "name" : "SAMP VR bindings for Vive Controllers",
+    "options" : {},
+    "simulated_actions" : []
+}

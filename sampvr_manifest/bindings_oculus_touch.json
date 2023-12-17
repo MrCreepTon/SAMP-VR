@@ -1,0 +1,104 @@
+{
+    "action_manifest_version" : 0,
+    "alias_info" : {},
+    "bindings" : {
+        "/actions/base" : {
+            "chords" : [],
+            "haptics" : [
+               {
+                  "output" : "/actions/base/out/vibration_left",
+                  "path" : "/user/hand/left/output/haptic"
+               },
+               {
+                  "output" : "/actions/base/out/vibration_right",
+                  "path" : "/user/hand/right/output/haptic"
+               }
+            ],
+            "poses" : [
+               {
+                  "output" : "/actions/base/in/pose_lefthand",
+                  "path" : "/user/hand/left/pose/raw"
+               },
+               {
+                  "output" : "/actions/base/in/pose_righthand",
+                  "path" : "/user/hand/right/pose/raw"
+               }
+            ],
+            "skeleton" : [
+               {
+                  "output" : "/actions/base/in/skeleton_lefthand",
+                  "path" : "/user/hand/left/input/skeleton/left"
+               },
+               {
+                  "output" : "/actions/base/in/skeleton_righthand",
+                  "path" : "/user/hand/right/input/skeleton/right"
+               }
+            ],
+            "sources" : []
+         },
+         "/actions/main" : {
+            "sources" : [
+               {
+                  "inputs" : {
+                     "click": {
+                        "output": "/actions/main/in/Crouch"
+                      },
+                     "position" : {
+                        "output" : "/actions/main/in/Walk"
+                     }
+                  },
+                  "mode" : "joystick",
+                  "parameters" : {
+                     "deadzone_pct" : "10"
+                  },
+                  "path" : "/user/hand/left/input/joystick"
+               },
+               {
+                  "inputs" : {
+                     "position" : {
+                        "output" : "/actions/main/in/RotateOrJump"
+                     }
+                  },
+                  "mode" : "joystick",
+                  "parameters" : {
+                     "deadzone_pct" : "10"
+                  },
+                  "path" : "/user/hand/right/input/joystick"
+               },
+               {
+                  "inputs" : {
+                     "click" : {
+                        "output" : "/actions/main/in/EnterExit"
+                     }
+                  },
+                  "mode" : "button",
+                  "path": "/user/hand/left/input/x"
+               },
+               {
+                  "inputs" : {
+                     "click" : {
+                        "output" : "/actions/main/in/Hit"
+                     }
+                  },
+                  "mode" : "trigger",
+                  "path": "/user/hand/right/input/trigger"
+               },
+               {
+                  "inputs" : {
+                     "click" : {
+                        "output" : "/actions/main/in/Hit"
+                     }
+                  },
+                  "mode" : "trigger",
+                  "path": "/user/hand/left/input/trigger"
+               }
+            ]
+        }
+    },
+    "category" : "steamvr_input",
+    "controller_type" : "oculus_touch",
+    "description" : "",
+    "name" : "SAMP VR bindings for Oculus Touch",
+    "options" : {},
+    "simulated_actions" : []
+}

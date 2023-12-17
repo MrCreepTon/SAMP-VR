@@ -1,0 +1,16 @@
+{
+	"source" : "builtin",
+	"applications": [{
+		"app_key": "mrc.sampvr",
+		"action_manifest_path" : "action_manifest.json",
+		"image_path" : "sampvr_capsule_main.png",
+		"launch_type": "url",
+		"url": "steam://launch/",
+		"strings": {
+			"en_us": {
+				"name": "SAMP VR",
+				"description": "SAMP VR Mod"
+			}
+		}
+	}]
+}

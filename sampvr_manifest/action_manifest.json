@@ -1,0 +1,61 @@
+{
+	"default_bindings": [
+		{
+			"controller_type": "oculus_touch",
+			"binding_url": "bindings_oculus_touch.json"
+		},
+		{
+			"controller_type": "vive_controller",
+			"binding_url": "bindings_vive_controller.json"
+		}
+	], 
+	
+	"actions": [
+		{
+			"name": "/actions/base/in/pose_lefthand",
+			"type": "pose"
+		},
+		{
+			"name": "/actions/base/in/pose_righthand",
+			"type": "pose"
+		},
+		{
+			"name": "/actions/base/out/vibration_left",
+			"type": "vibration"
+		},
+		{
+			"name": "/actions/base/out/vibration_right",
+			"type": "vibration"
+		},
+		{
+			"name" : "/actions/base/in/skeleton_lefthand",
+			"skeleton" : "/skeleton/hand/left",
+			"type" : "skeleton"
+		},
+		{
+			"name" : "/actions/base/in/skeleton_righthand",
+			"skeleton" : "/skeleton/hand/right",
+			"type" : "skeleton"
+		},
+        {
+			"name": "/actions/main/in/Walk",
+			"type": "vector2"
+		},
+		{
+			"name": "/actions/main/in/RotateOrJump",
+			"type": "vector2"
+		},
+		{
+			"name": "/actions/main/in/Crouch",
+			"type": "boolean"
+		},
+		{
+			"name": "/actions/main/in/EnterExit",
+			"type": "boolean"
+		},
+		{
+			"name": "/actions/main/in/Hit",
+			"type": "boolean"
+		}
+    ]
+}
